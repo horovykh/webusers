@@ -1,9 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 4.7.4
--- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Фев 06 2018 г., 18:52
 -- Версия сервера: 5.7.19-log
 -- Версия PHP: 7.1.8
 
@@ -54,7 +52,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

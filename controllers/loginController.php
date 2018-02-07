@@ -1,16 +1,19 @@
 <?php
 
+
 session_start();
 
 if (isset($_POST['login']) and isset($_POST['password'])) {
 
 	$login    = $_POST['login'];
 	$password = $_POST['password'];
-	
 
-	$connection = new mysqli( 'localhost', 'root', 'root', 'webusers' );
+
+	$config = parse_ini_file('config.ini');
+
+	$connection = new mysqli( $config['localhost'],$config['username'],$config['password'],$config['dbname']);
 	if ( $connection->connect_errno ) {
-		echo( 'ERROR ' . $connection->connect_error );
+		//echo( 'ERROR ' . $connection->connect_error );
 	} else {
 		$_SESSION['login'] = $login;
 

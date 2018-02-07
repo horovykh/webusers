@@ -1,6 +1,5 @@
 <?php
 
-include 'config.php';
 include 'controllers/loginController.php';
 include 'models/changeUserData.php';
 require 'vendor/autoload.php';

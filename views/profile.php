@@ -15,6 +15,6 @@
         <input class="form-control" type="password" name="newPassword" id="newPassword" placeholder="New password" minlength="6"><br/>
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-lg btn-primary btn-block" name="save_new_user_data" id="btn" value="Save changes" ><br/>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" name="save_new_user_data" id="newBtn" value="Save changes" ><br/>
     </div>
 </form>

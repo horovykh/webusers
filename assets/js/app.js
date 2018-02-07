@@ -16,22 +16,22 @@ $(document).ready(function () {
         }
     });
 
-    $('#btn').on('click', function(){
+    $('#btn').on('click', function () {
         var elementsFormRules = [
             'login',
             'mail',
             'password'
         ];
-        elementsFormRules.forEach(function(element) {
+        elementsFormRules.forEach(function (element) {
             var nameElementsId = '#' + element;
-            if(!$(nameElementsId).valid()) {
+            if (!$(nameElementsId).valid()) {
                 $(nameElementsId).parent().addClass('has-error');
             } else {
                 $(nameElementsId).parent().removeClass('has-error').addClass('has-success');
             }
         })
 
-        if($('#userRegistration').valid()) {
+        if ($('#userRegistration').valid()) {
             console.log('Success!');
 
             localStorage.setItem('userRegistration', JSON.stringify({
@@ -42,10 +42,16 @@ $(document).ready(function () {
             return;
         }
     });
-/*
-    var userRegistration = JSON.parse(localStorage.getItem('userRegistration'));
-    console.log(userRegistration.login);
-    console.log(userRegistration.email);
-    console.log(userRegistration.password);
-*/
+
+    $('#newBtn').on('click', function () {
+        var str = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "changeUserData.php",
+            data: str,
+            success: 'ОК'
+
+        });
+        alert('Save new changes');
+    });
 });

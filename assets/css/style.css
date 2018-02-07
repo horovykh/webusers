@@ -121,3 +121,24 @@ body {
 .form-group label {
     color: darkred;
 }
+
+#navbarmenu {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    width: 1000px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#navbarmenu li {
+    display: inline;
+}
+
+#navbarmenu a {
+    color: #244260;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+}
